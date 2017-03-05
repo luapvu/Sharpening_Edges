@@ -1,0 +1,12 @@
+addpath(genpath('functions'));
+addpath(genpath('../Images'));
+
+%Read 10 mugshot images
+mug1 = readImg('mugshot1.jpg');
+printImg(mug1, 'Original Mugshot');
+[edges, clearEdges, enhanced, amplified_enhancments] = mask(mug1);
+
+printImg(clearEdges, 'Enhanced Edges');
+printImg(edges, 'Edges');
+printImg(enhanced, 'Enhanced Mugshot');
+printImg(amplified_enhancments, 'Amplified En');
